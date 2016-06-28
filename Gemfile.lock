@@ -60,6 +60,7 @@ GEM
       warden (~> 1.2.3)
     devise-bootstrap-views (0.0.8)
     diff-lcs (1.2.5)
+    elo (0.1.0)
     erubis (2.7.0)
     execjs (2.7.0)
     factory_girl (4.5.0)
@@ -202,6 +203,7 @@ DEPENDENCIES
   bootswatch-rails
   devise
   devise-bootstrap-views
+  elo
   factory_girl_rails
   faker
   jquery-rails
