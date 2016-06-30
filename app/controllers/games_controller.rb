@@ -1,6 +1,9 @@
 class GamesController < ApplicationController
-  def new
-    @game = Game.new
+  def create
+    @game = Game.create
     @game.draft_players
+  end
+
+  def update
   end
 end

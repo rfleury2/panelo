@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+["Ronaldo", "Zinedine Zidane", "Paolo Maldini", "Roberto Baggio", "Marco Van Basten"].each do |name|
+  Player.find_or_create_by(name: name)
+end

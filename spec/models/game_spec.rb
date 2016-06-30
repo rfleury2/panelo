@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Game, type: :model do
   it { should belong_to(:player_1).class_name("Player") }
   it { should belong_to(:player_2).class_name("Player") }
+  it { should belong_to(:user) }
 
   context 'players' do
     let(:player_1) { FactoryGirl.build(:player) }
