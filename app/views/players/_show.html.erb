@@ -1,8 +1,9 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= player.name %></h3>
+    <h3 class="panel-title"><%= player.name %> - <%= player.rating %></h3>
   </div>
   <div class="panel-body">
     <img src='http://placehold.it/300x300' />
+    <%= button_to "Winner", game_path(game, {winner_id: player.id}), method: :put, class: 'btn btn-success' %>    
   </div>
 </div>

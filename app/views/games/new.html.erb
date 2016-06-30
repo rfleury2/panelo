@@ -1,0 +1,9 @@
+<div class='col-xs-5'>
+  <%= render partial: "players/show", locals: { player: @game.player_1, game: @game } %>
+</div>
+<div class='col-xs-2'>
+vs
+</div>
+<div class='col-xs-5'>
+  <%= render partial: "players/show", locals: { player: @game.player_2, game: @game } %>
+</div>
