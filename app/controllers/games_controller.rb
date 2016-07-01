@@ -1,6 +1,10 @@
 class GamesController < ApplicationController
   def new
-    @game = Game.create
+    if signed_in?
+      @game = current_user.games.create
+    else
+      @game = Game.create
+    end
     @game.draft_players
   end
 
