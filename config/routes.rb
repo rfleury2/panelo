@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   resources :games, only: [:new, :update]
+  resources :players, only: [:index]
 
 
   # Example of regular route:

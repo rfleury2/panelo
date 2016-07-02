@@ -7,3 +7,8 @@ vs
 <div class='col-xs-5'>
   <%= render partial: "players/show", locals: { player: @game.player_2, game: @game } %>
 </div>
+<% if user_signed_in? %>
+  <%= link_to 'See community results', players_path %>
+<% else %>
+  <%= link_to 'Log in to see community results', new_user_session_path, class: 'btn btn-primary' %>
+<% end %>

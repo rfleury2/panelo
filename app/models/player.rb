@@ -7,6 +7,8 @@ class Player < ActiveRecord::Base
 
   validates_numericality_of :rating
 
+  scope :by_rating, -> { order(rating: :desc) }
+
   def to_elo
     Elo::Player.new(rating: rating)
   end
