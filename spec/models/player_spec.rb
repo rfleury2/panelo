@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Player, type: :model do
   it { should have_many(:player_1_games).with_foreign_key(:player_1_id) }
   it { should have_many(:player_2_games).with_foreign_key(:player_2_id) }
+  it { should belong_to :contest }
 
   it { should validate_presence_of :name }
   it { should validate_presence_of :rating }

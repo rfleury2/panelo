@@ -1,0 +1,3 @@
+<% @contests.each do |contest| %>
+  <%= link_to contest.title, new_contest_game_path(contest) %>
+<% end %>

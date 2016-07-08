@@ -3,6 +3,7 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.belongs_to :player_1
       t.belongs_to :player_2
+      t.belongs_to :contest
       t.string :winner
 
       t.timestamps null: false

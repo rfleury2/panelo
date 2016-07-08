@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+contest = Contest.find_or_create_by(title: "Best male tennis player of all time")
 [
   "Pete Sampras",
   "Roger Federer",
@@ -17,7 +17,8 @@
   "Bjorn Borg",
   "Mats Wilander",
   "Boris Becker",
-  "Stefan Edberg"
+  "Stefan Edberg",
+  "Andre Agassi"
 ].each do |name|
-  Player.find_or_create_by(name: name)
+  contest.players.find_or_create_by(name: name)
 end

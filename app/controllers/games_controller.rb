@@ -1,9 +1,12 @@
 class GamesController < ApplicationController
+  before_filter :get_contest
+
   def new
     if signed_in?
-      @game = current_user.games.create
+      binding.pry
+      @game = current_user.games.create(contest: @contest)
     else
-      @game = Game.create
+      @game = @contest.games.create
     end
     @game.draft_players
   end
@@ -12,7 +15,7 @@ class GamesController < ApplicationController
     get_game
     assign_winner
     GameProcessor.new(@game)
-    redirect_to new_game_path
+    redirect_to new_contest_game_path(@contest)
   end
 
   private 
@@ -36,5 +39,10 @@ class GamesController < ApplicationController
   def get_winner
     @winner = Player.find_by(id: params[:winner_id])
     raise ArgumentError unless @winner
+  end
+
+  def get_contest
+    @contest = Contest.find_by(id: params[:contest_id])
+    raise ArgumentError unless @contest
   end
 end
