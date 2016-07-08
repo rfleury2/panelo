@@ -22,4 +22,13 @@ RSpec.describe Player, type: :model do
   context 'games' do
     # TODO: Spec
   end
+
+  context '#image_suffix' do
+    let(:contest) { FactoryGirl.create(:contest) }
+    let(:player) { FactoryGirl.build(:player, name: 'CrAzY PersOn', contest: contest) }
+
+    it 'returns the proper image path' do
+      expect(player.image_suffix).to eq "contests/#{contest.id}/crazy_person.jpg"
+    end
+  end
 end

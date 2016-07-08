@@ -3,7 +3,6 @@ class GamesController < ApplicationController
 
   def new
     if signed_in?
-      binding.pry
       @game = current_user.games.create(contest: @contest)
     else
       @game = @contest.games.create
