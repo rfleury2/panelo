@@ -1,1 +1,19 @@
-<%= link_to "Play!", contests_path %>
+<div class="jumbotron">
+  <h1>One on one matchups to rank the best</h1>
+  <p>.</p>
+  <p><%= link_to "Play!", contests_path, class: "btn btn-primary btn-lg" %></p>
+</div>
+
+<h2>How do I play?</h2>
+
+<p>Take USA presidents as an example.  You receive several one versus one matchups and select the better president between the two options.  The sum of all of the one on one matchups you selected is used to rank of all the presidents using the Elo rating system.</p>
+
+<%= link_to "Play president Elo!", new_contest_game_path(2) %>
+
+<h2>What is the Elo rating system?</h2>
+<p>The Elo rating system is a method for calculating the relative skill levels of players in competitor-versus-competitor games such as chess. It is named after its creator Arpad Elo, a Hungarian-born American physics professor.</p>
+
+<p>The Elo system was originally invented as an improved chess rating system but is also used as a rating system for multiplayer competition in a number of video games, association football, gridiron football, basketball, Major League Baseball, Scrabble, snooker and other games.</p>
+
+<p>The difference in the ratings between two players serves as a predictor of the outcome of a match.</p>
+<%= link_to "Source: Wikipedia, the place we all go for concise information", 'https://en.wikipedia.org/wiki/Elo_rating_system', class:'attribution-link pull-right' %>

@@ -22,3 +22,55 @@ contest = Contest.find_or_create_by(title: "Best male tennis player of all time"
 ].each do |name|
   contest.players.find_or_create_by(name: name)
 end
+
+def seed_presidents
+  contest = Contest.find_or_create_by(title: "Best president of the United States")
+  [
+    "George Washington",
+    "John Adams",
+    "Thomas Jefferson",
+    "James Madison",
+    "James Monroe",
+    "John Quincy Adams",
+    "Andrew Jackson",
+    "Martin Van Buren",
+    "William Henry Harrison",
+    "John Tyler",
+    "James K. Polk",
+    "Zachary Taylor",
+    "Millard Fillmore",
+    "Franklin Pierce",
+    "James Buchanan",
+    "Abraham Lincoln",
+    "Andrew Johnson",
+    "Ulysses S. Grant",
+    "Rutherford B. Hayes",
+    "James A. Garfield",
+    "Chester A. Arthur",
+    "Grover Cleveland",
+    "Benjamin Harrison",
+    "William McKinley",
+    "Theodore Roosevelt",
+    "William Howard Taft",
+    "Woodrow Wilson",
+    "Warren G. Harding",
+    "Calvin Coolidge",
+    "Herbert Hoover",
+    "Franklin D. Roosevelt",
+    "Harry S. Truman",
+    "Dwight D. Eisenhower",
+    "John F. Kennedy",
+    "Lyndon B. Johnson",
+    "Richard Nixon",
+    "Gerald Ford",
+    "Jimmy Carter",
+    "Ronald Reagan",
+    "George H. W. Bush",
+    "Bill Clinton",
+    "George W. Bush",
+    "Barack Obama"
+  ].each do |name|
+    contest.players.find_or_create_by(name: name)
+  end  
+end
+seed_presidents

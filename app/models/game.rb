@@ -10,8 +10,8 @@ class Game < ActiveRecord::Base
 
   def draft_players
     until player_1 != player_2 do
-      self.player_1 = Player.all.sample
-      self.player_2 = Player.all.sample # test for match
+      self.player_1 = contest.players.sample
+      self.player_2 = contest.players.sample
     end
     self.save
   end

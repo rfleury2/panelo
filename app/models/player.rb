@@ -19,6 +19,6 @@ class Player < ActiveRecord::Base
   end
 
   def image_suffix
-    "contests/#{contest.id}/#{name.downcase.gsub(" ", "_")}.jpg"
+    "contests/#{contest.id}/#{name.downcase.gsub(" ", "_").gsub(".", "")}.jpg"
   end
 end

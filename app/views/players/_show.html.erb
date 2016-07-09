@@ -1,9 +1,9 @@
-<div class="panel panel-primary">
+<div class="panel">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= player.name %> - <%= player.rating %></h3>
+    <h3 class="panel-title"><%= player.name %></h3>
   </div>
   <div class="panel-body">
     <%= image_tag player.image_suffix, height: 300, width: 300 %>
-    <%= button_to "Winner", contest_game_path(game.contest, game, {winner_id: player.id}), method: :put, class: 'btn btn-success' %>    
+    <%= button_to "Winner", contest_game_path(game.contest, game, {winner_id: player.id}), method: :put, class: 'btn btn-primary winner-button' %>    
   </div>
 </div>
