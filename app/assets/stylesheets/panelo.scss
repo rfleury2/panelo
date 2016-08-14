@@ -2,6 +2,16 @@
   font-size: .8em;
 }
 
+body {
+  background-image: image_url('soccer.jpg');
+  background-repeat: none;
+  opacity: 60%;
+}
+
+.input-group {
+  padding: 10px;
+}
+
 .vs-box {
   height: 400px;
 }
