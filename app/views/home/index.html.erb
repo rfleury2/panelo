@@ -1,9 +1,8 @@
 <body class="landing-page">
-
   <div class="page-header header-filter main-screen" data-parallax="active">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
           <h1 class="title">What is the best squad of all time?</h1>
             <h4>Determine which teams are the best based on a series of one-on-one hypothetical matchups using the Elo rating system.</h4>
             <br />
@@ -12,6 +11,12 @@
             <% end %>
           </a>
         </div>
+        <% unless signed_in? %>
+          <div class="col-md-1"></div>
+          <div class='col-md-4 col-xs-hidden'>
+            <%= render 'devise/shared/login' %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
