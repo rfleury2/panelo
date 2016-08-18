@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'beac05734b64b376f8f08036801c8eb2580e87e4cd7b9d9415e6d4468251ecb52cee0c389fe9d933ee69c7a007f29386877ecb485071b5db0f962975c41aa641'
+  # config.secret_key = 'f9bd922d9bacad321dcd4d36bcce7eaac5c801504366c6608e4cfe55d511edd6da739c7b1d6dd211b08b9a3bcd9b3bef21b037424c5ab2dde31b238b93599e26'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -244,6 +244,11 @@ Devise.setup do |config|
   config.omniauth :twitter, 
     Rails.application.secrets.TWITTER_API_KEY, 
     Rails.application.secrets.TWITTER_API_SECRET
+
+  config.omniauth :facebook, 
+    Rails.application.secrets.FACEBOOK_APP_ID, 
+    Rails.application.secrets.FACEBOOK_APP_SECRET,
+      scope: 'email', display: 'popup'
 
 #   API_KEY: "anZaW6aGvJWUNlbLrPHuFNVl0"
 # API_SECRET: "HRVreG2nA41cGDB73H7idy9vVIpUZe80oVO5xU7fAvshNAvjLk"
