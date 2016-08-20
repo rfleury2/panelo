@@ -2,18 +2,7 @@
   <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
     <div class="card card-signup">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
-        <div class="header header-primary text-center">
-          <h4 class="card-title">Log in</h4>
-          <div class="social-line">
-            <a href=<%= user_omniauth_authorize_url(:twitter) %> class="btn btn-just-icon btn-simple">
-              <i class="fa fa-twitter fa-2x"></i>
-            </a>
-            <!-- 
-            <a href= #user_omniauth_authorize_url(:facebook)  class="btn btn-just-icon btn-simple">
-              <i class="fa fa-facebook-square fa-2x"></i>
-            </a> -->
-          </div>
-        </div>
+        <%= render partial: 'devise/shared/social_login', locals: { title: "Log in" } %>
         
         <div class="content">
           <div class="input-group">
