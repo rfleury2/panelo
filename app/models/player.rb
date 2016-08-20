@@ -14,10 +14,6 @@ class Player < ActiveRecord::Base
     Elo::Player.new(rating: rating)
   end
 
-  def games
-    # TODO: Implement a sum of player_1_games and player_2_games
-  end
-
   def image_suffix
     "contests/#{contest.id}/#{name.downcase.gsub(" ", "_").gsub(".", "")}.jpg"
   end
