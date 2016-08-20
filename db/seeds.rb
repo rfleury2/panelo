@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-contest = Contest.find_or_create_by(title: "Best male tennis player of all time")
+contest = Contest.find_or_create_by(title: "Who is the best male tennis player of all time?", category: "sports")
 [
   "Pete Sampras",
   "Roger Federer",
@@ -24,7 +24,7 @@ contest = Contest.find_or_create_by(title: "Best male tennis player of all time"
 end
 
 def seed_presidents
-  contest = Contest.find_or_create_by(title: "Best president of the United States")
+  contest = Contest.find_or_create_by(title: "Who is the best president of the United States?", category: "history")
   [
     "George Washington",
     "John Adams",

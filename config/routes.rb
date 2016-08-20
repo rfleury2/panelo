@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { 
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
-  get '/auth/facebook/callback', to: ''
+  # get '/auth/facebook/callback', to: ''
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

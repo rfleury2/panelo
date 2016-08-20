@@ -1,12 +1,14 @@
-<div>
-  <div>
-    <h2><%= player.name %></h2>
-  </div>
-  <div class='player-info'>
+<div class="card card-blog">
+  <div class="card-image">
     <div class='player-image'>
-      <%= image_tag player.image_suffix, height: 300, width: 300 %>
+      <%= image_tag player.image_suffix, class: 'img' %>
     </div>
-    <div>
+  </div>
+  <div class="content">
+    <h2 class="category text-danger">
+      <%= player.name %>
+    </h2>
+    <div class="footer">
       <%= button_to "Winner", contest_game_path(game.contest, game, {winner_id: player.id}), method: :put, class: 'btn btn-success winner-button' %>    
     </div>
   </div>

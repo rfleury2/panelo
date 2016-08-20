@@ -3,17 +3,18 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1 class="title">What is the best squad of all time?</h1>
-            <h4>Determine which teams are the best based on a series of one-on-one hypothetical matchups using the Elo rating system.</h4>
-            <br />
+          <h1 class="title">Panelo -- Elo ratings for all kinds of things</h1>
+          <h4>Decide who are the best of all time by pinning opponents against each other, one matchup at a time.</h4>
+          <br />
+          <% if signed_in? %>
             <%= link_to contests_path, class: "btn btn-danger btn-raised btn-lg" do %>
               <i class="fa fa-play"></i> See all games
             <% end %>
+          <% end %>
           </a>
         </div>
         <% unless signed_in? %>
-          <div class="col-md-1"></div>
-          <div class='col-md-4 col-xs-hidden'>
+          <div class='col-md-5 col-xs-hidden'>
             <%= render 'devise/shared/login' %>
           </div>
         <% end %>

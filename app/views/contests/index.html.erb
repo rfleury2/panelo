@@ -7,14 +7,11 @@
             <%= link_to contest.title, new_contest_game_path(contest) %>
           </h4>
           <div class="footer">
-                <div class="author">
-                  <a href="#pablo">
-                  </a>
-                </div>
-                <div class="stats">
-                  <i class="material-icons">favorite</i> 2.4K &middot;
-                  <i class="material-icons">share</i> 45
-                </div>
+            <div class="author">
+            </div>
+            <div class="stats">
+              <%= contest.category %>
+            </div>
             </div>
           </div>
         </div>
