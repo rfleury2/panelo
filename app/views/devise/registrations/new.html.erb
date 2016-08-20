@@ -1,10 +1,22 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="card card-signup">
-      <h2 class="card-title text-center">Register</h2>
       <div class="row">
         <%= bootstrap_devise_error_messages! %>
         <div class="panel-body">
+          <div class="header header-primary text-center">
+            <h4 class="card-title">Register</h4>
+            <div class="social-line">
+              <a href=<%= user_omniauth_authorize_url(:twitter) %> class="btn btn-just-icon btn-simple">
+                <i class="fa fa-twitter fa-2x"></i>
+              </a>
+              <!-- 
+              <a href= #user_omniauth_authorize_url(:facebook)  class="btn btn-just-icon btn-simple">
+                <i class="fa fa-facebook-square fa-2x"></i>
+              </a> -->
+            </div>
+          </div>
+
           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
             <div class="form-group">
               <%= f.label :email %>
@@ -18,7 +30,10 @@
               <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, class: "form-control" %>
             </div>
-            <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+
+            <div class="footer text-center">
+              <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+            </div>
           <% end %>
         </div>
         </div>
