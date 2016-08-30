@@ -16,11 +16,12 @@ RSpec.describe Player, type: :model do
   end
 
   context 'to_elo' do
-    # TODO: Spec
-  end
+    let(:player) { FactoryGirl.build(:player, rating: 1200) }
 
-  context 'games' do
-    # TODO: Spec
+    it "creates an elo object with the player's rating" do
+      to_elo = player.to_elo
+      expect(to_elo.rating).to eq player.rating
+    end
   end
 
   context '#image_suffix' do

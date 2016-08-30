@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Baseapp</title>
+  <title>Panelo</title>
+
+  
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />  
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body>  
+  <%= render partial: 'layouts/header' %>
 
-<%= render partial: 'layouts/header' %>
+  <div class='container'>
+    <% if notice %>
+      <div class="alert alert-dismissible alert-info"><p><%= notice %></p></div>
+    <% end %>
 
-<div class='container'>
-  <% if notice %>
-    <div class="alert alert-dismissible alert-info"><p><%= notice %></p></div>
-  <% end %>
-
-  <% if alert %>
-    <div class="alert alert-dismissible alert-danger"><p><%= alert %></p></div>
-  <% end %>
+    <% if alert %>
+      <div class="alert alert-dismissible alert-danger"><p><%= alert %></p></div>
+    <% end %>
+  </div>
 
   <%= yield %>
-</div>
 
 </body>
 </html>

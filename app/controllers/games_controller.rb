@@ -4,10 +4,10 @@ class GamesController < ApplicationController
   def new
     if signed_in?
       @game = current_user.games.create(contest: @contest)
+      @game.draft_players
     else
-      @game = @contest.games.create
+      redirect_to new_user_session_path(contest_id: @contest.id)
     end
-    @game.draft_players
   end
 
   def update
