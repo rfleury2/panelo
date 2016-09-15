@@ -6,6 +6,6 @@ class PlayersController < ApplicationController
   private
 
   def contest
-    Contest.find_by(id: params[:contest_id])
+    @contest ||= Contest.find_by(id: params[:contest_id])
   end
 end

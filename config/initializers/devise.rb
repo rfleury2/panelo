@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'f9bd922d9bacad321dcd4d36bcce7eaac5c801504366c6608e4cfe55d511edd6da739c7b1d6dd211b08b9a3bcd9b3bef21b037424c5ab2dde31b238b93599e26'
+  # config.secret_key = '93779856fe4ae62c95e5f270ea1577c95c822611230d0162faedb56164e5bffdebea34c5cf98947992f62fe807488758bed4792ca119bbd764081219e18fe87f'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -237,21 +237,21 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+  config.secret_key = 'd94fc700abd19627797684455bf11038de33bbe6973c850315e5b32c8afd0b580348ee2056198ed7f04215e6cc5dbfd753a2a60f1f8eb652bc63ff79439bfb51'
+  # Rails.application.secrets.DEVISE_SECRET_KEY
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   config.omniauth :twitter, 
-    Rails.application.secrets.TWITTER_API_KEY, 
+    Rails.application.secrets.TWITTER_API_KEY,
     Rails.application.secrets.TWITTER_API_SECRET
 
-  config.omniauth :facebook, 
-    Rails.application.secrets.FACEBOOK_APP_ID, 
-    Rails.application.secrets.FACEBOOK_APP_SECRET,
-      scope: 'email', display: 'popup'
+  # config.omniauth :facebook, 
+  #   Rails.application.secrets.FACEBOOK_APP_ID, 
+  #   Rails.application.secrets.FACEBOOK_APP_SECRET,
+  #     scope: 'email', display: 'popup'
 
-#   API_KEY: "anZaW6aGvJWUNlbLrPHuFNVl0"
-# API_SECRET: "HRVreG2nA41cGDB73H7idy9vVIpUZe80oVO5xU7fAvshNAvjLk"
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   # ==> Warden configuration

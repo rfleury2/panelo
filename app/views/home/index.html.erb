@@ -5,9 +5,11 @@
         <div class="col-md-7">
           <h1 class="title">Panelo -- Elo ratings for all sorts of things</h1>
           <h4>Decide who are the best of all time by pinning opponents against each other, one matchup at a time.</h4>
+
+          <h4>We are in early testing mode.  Try our United States president game.</h4>
           <br />
-          <%= link_to contests_path, class: "btn btn-danger btn-raised btn-lg" do %>
-            <i class="fa fa-play"></i> See all games
+          <%= link_to new_contest_game_path(2), class: "btn btn-danger btn-raised btn-lg" do %>
+            <i class="fa fa-play"></i> Play Presidents Elo!
           <% end %>
         </div>
         <% unless signed_in? %>
