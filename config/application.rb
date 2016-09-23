@@ -34,5 +34,6 @@ module Baseapp
     config.autoload_paths << Rails.root.join("app/services")
     
     config.assets.initialize_on_precompile = false
+    config.serve_static_assets = true
   end
 end
